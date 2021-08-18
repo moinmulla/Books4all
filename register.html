@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>books4all.com</title>
+
+  
+  
+  <script>
+function validateForm()
+{
+var x=document.booksforall.firstname.value;
+var y=document.booksforall.lastname.value;
+var z=document.booksforall.mobilenumber.value;
+var p=document.booksforall.email.value;
+if (x==null || x=="")
+{
+alert("Please enter your first name");
+document.booksforall.firstname.focus();
+return false;
+}
+if (y==null || y=="")
+{
+alert("Please enter your last name");
+document.booksforall.lastname.focus();
+return false;
+
+}
+if (z==""|| isNaN(z)|| z.length>10|| z.length<10)
+{
+alert("Please enter your number properly");
+document.booksforall.mobilenumber.focus();
+return false;
+}
+if (p=="" || p==null)
+{
+alert("Please enter your E-mail address properly")
+document.booksforall.email.focus();
+return false;
+}
+}
+  </script>
+  
+  <style type="text/css">
+h1 {
+  font-style: italic;
+  font-weight: bold;
+  color: #33cc00;
+  background-color: #3366ff;
+}
+
+  </style>
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
+<div style="text-align: center;">
+<form onsubmit="return validateForm()" method="post" action="Books4All.com" name="booksforall">
+  <h1><big>Registration
+Form</big></h1>
+  <div style="text-align: left;">
+  <div style="text-align: center;"><big><big>First name</big></big> : <input name="firstname"><br>
+  <br>
+  <big><big>Last name</big></big> : <input name="lastname"><br>
+  <br>
+  <span class=""></span><big><big>Email address</big></big> : <input name="email"><br>
+  <br>
+  <big><big>Password :</big></big><input name="password"><br>
+  <br>
+  <big><big>Mobile number :</big></big> <input name="mobilenumber"><br>
+  </div>
+  <br>
+  <div style="text-align: center;"><input name="submit" value="Submit" type="submit">&nbsp; <input name="reset" value="Reset" type="reset"><br>
+  </div>
+  <br>
+  </div>
+  <br>
+</form>
+</div>
+
+</body></html>

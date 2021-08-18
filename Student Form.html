@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Student Form</title>
+
+  
+  
+  <script>
+  function validateForm()
+  {
+  if((document.StudentForm.Gender[0].checked==false)&&(document.StudentForm.Gender[1].checked==false))
+  {
+  alert( "Please choose Your Gender: Male or Female" );
+  document.StudentForm.Gender[0].focus();
+  return false;
+  }
+  if((document.StudentForm.Hobby[0].checked==false)&&(document.StudentForm.Hobby[1].checked==false))
+  alert( "Please choose a Hobby" );
+  document.StudentForm.Hobby[0].focus();
+  return false;
+  }
+  }
+  </script>
+</head><body>
+<div style="text-align: center;">
+<form onsubmit="return validateForm()" method="post" action="StudentForm.html" name="StudentForm"><big><big><big>Student
+Form</big></big></big><br>
+  <div style="text-align: left;">&nbsp;<br>
+&nbsp;Hobby <input name="Hobby" value="Dancing" type="checkbox">Dancing
+  <input name="Hobby" value="Singing" type="checkbox">Singing<br>
+Gender <input name="Gender" value="Male" type="radio">Male <input name="Gender" value="Female" type="radio">Female<br>
+  <input name="Submit" value="Submit" type="submit"> <input name="Reset" value="Reset" type="reset"><br>
+  </div>
+</form>
+</div>
+
+</body></html>

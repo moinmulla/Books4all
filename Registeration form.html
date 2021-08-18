@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>www.moin.com</title>
+
+  
+  
+  <script>
+function validateForm()
+{
+var x=document.me.name.value;
+var y=document.me.phone.value;
+var z=document.me.address.value;
+
+if (x==null || x=="")
+{ 
+    	alert("Please enter your name"); 
+   	 document.me.name.focus();
+   	 return false;
+}
+
+if(y==""|| isNaN(y)|| y.length>10|| y.length<10)
+{
+	  alert("Please enter your number properly");
+ 	 document.me.phone.focus();
+ 	 return false;
+}
+if(z=="")
+{
+	alert("Please enter your address");
+	document.me.address.focus();
+	return false;
+}
+if((document.me.gender[0].checked==false)&&(document.me.gender[1].checked==false))
+{
+	alert("Please select proper Gender :Male or Female")
+	document.me.gender[0].focus();
+	return false;
+} 
+if((document.me.hobby[0].checked==false)&&(document.me.hobby[1].checked==false)&&(document.me.hobby[2].checked==false))
+{
+	alert("Please select your proper hobby");
+	document.me.hobby[0].focus();
+	return false;
+}
+if(document.me.city.value=="-1")
+{
+	alert("Please select your proper city");
+	documrnt.me.city.focus();
+	return false;
+}
+}
+  </script>
+  
+  <style type="text/css">
+h1 {
+  border: 2px solid #6600cc;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #3366ff;
+  background-color: #00cccc;
+}
+
+  </style>
+</head><body style="color: red; background-color: rgb(102, 255, 153);" alink="#000099" link="#000099" vlink="#990099">
+<div style="text-align: center; font-weight: bold;">
+<form onsubmit="return validateForm()" method="post" action="action.html" name="me">
+  <h1><big><big><span style="background-color: rgb(51, 255, 51);">Registration
+Page</span></big></big></h1>
+  <h1><big><big><big><big> </big></big></big></big></h1>
+  <div style="text-align: left;"><span style="color: black;">Name
+: </span><input style="color: black;" name="name" value="Enter your name"><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">Address : </span><textarea style="color: black;" cols="25" rows="5" name="address"></textarea><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">Gender : </span><input style="color: black;" name="gender" value="male" type="radio"><span style="color: black;">male&nbsp; </span><input style="color: black;" name="gender" value="femnale" type="radio"><span style="color: black;">fermale</span><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">Hobby : </span><input style="color: black;" name="hobby" value="Archery" type="checkbox"><span style="color: black;">Archery&nbsp; </span><input style="color: black;" name="hobby" value="singing" type="checkbox"><span style="color: black;">Singing&nbsp; </span><input style="color: black;" name="hobby" value="Dancing" type="checkbox"><span style="color: black;">Dancing</span><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">E-mail : </span><input style="color: black;" name="e-mail"><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">Password : </span><input style="color: black;" name="password" type="password"><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">City : </span>
+  <select style="color: black;" name="city">
+  <option value="-1">Select the city</option>
+  <option>Daman</option>
+  <option>Diu</option>
+  <option>Goa</option>
+  <option>DNH</option>
+  <option>Delhi</option>
+  </select>
+  <span style="color: black;"> </span><br style="color: black;">
+  <br style="color: black;">
+  <span style="color: black;">Phone No. </span><input style="color: black;" name="phone"><span style="color: black;"> </span><br style="color: black;">
+  <br>
+  <input name="submit" value="Click to Submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input name="reset" value="Click to reset" type="reset"><br>
+  </div>
+  <big><big><big><big><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </big></big></big></big></form>
+</div>
+
+</body></html>
